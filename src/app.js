@@ -1,4 +1,3 @@
-
 const path = require('path')
 const express = require('express')
 const hbs= require('hbs')
@@ -21,7 +20,7 @@ const partialPath= path.join(__dirname,'../templates/partials')
 app.set('view engine', 'hbs');
 app.set('views',viewsPath)// Default path is views in project Folder
 hbs.registerPartials(partialPath)
-console.log(partialPath)
+
 //set up static directory to serve
 app.use(express.static(publicDirPath))
 

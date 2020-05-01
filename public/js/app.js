@@ -23,7 +23,7 @@ form1.addEventListener("submit", function(e){
    
    console.log(searchvalue.value)
    var country='Boston';
-fetch('http://localhost:3000/weather?address='+searchvalue.value).then((response)=>{
+fetch('/weather?address='+searchvalue.value).then((response)=>{
 response.json().then((data)=>{
   console.log(data)
   if(data.error)

@@ -5,6 +5,7 @@ const request= require('request')
 const geolocation =require('./utils/geocode')
 const forecast =require('./utils/forecast')
 
+const port=process.env.PORT ||3000
 console.log(__dirname)
 console.log(__filename)
 console.log(path.join(__dirname,'../public'))
@@ -109,7 +110,7 @@ app.get('/product',(req,res)=>
   
 
 })
-app.listen(3000,()=>
+app.listen(port,()=>
 {
 
      console.log("server is on port 3000")
